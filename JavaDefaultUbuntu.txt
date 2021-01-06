@@ -1,0 +1,20 @@
+Como Instalar Java no Ubuntu 18.04
+	apt-get update && apt-get upgrade
+Assim que terminar, instale a versão mais recente do Java Runtime Enviroment (JRE) executando este comando abaixo:
+
+	apt-get install default-jre
+
+Também é possível instalar o Java Development Kit (JDK). Ele é exigido por softwares específicos ou usado para compilar programas feitos em Java. O JDK inclui o JRE. Por isso, não tem desvantagem alguma se você escolher este método ao invés do outro.  
+
+	apt-get install default-jdk
+
+E é isso! O Java foi instalado com sucesso. Para verificar se tudo está funcionando bem, use este comando de verificação:
+
+	java -version
+	javac -version
+
+E alguns codecs extras:
+	
+	sudo apt install xubuntu-restricted-extras
+					 lubuntu
+					 ubuntu

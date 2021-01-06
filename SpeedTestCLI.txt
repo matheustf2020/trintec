@@ -1,0 +1,25 @@
+- Como verificar a velocidade da internet via Terminal no Linux:
+
+Speedtest.net é um bom lugar para verificar a velocidade da Internet, aliás da sua conexão de Internet. Mas há uma maneira ainda mais simples.
+Usando o aplicativo de linha de comando speedtest-cli, você pode realmente verificar a velocidade atual de sua conexão de banda larga via Terminal. Então, veja aqui como fazer isso.
+Instalando o Speedtest-cli no Linux, para verificar a velocidade da internet
+Para instalar o Speedtest-cli no Linux, faça o seguinte:
+
+	Passo 1. Abra um terminal;
+	Passo 2. Baixe o arquivo speedtest-li.py para o seu computador com o comando:
+
+		wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py -O speedtest-cli
+
+	Passo 3. Torne o arquivo baixado um executável com o comando abaixo:
+
+		chmod +x speedtest-cli
+	
+	Passo 4. Mova o arquivo para a pasta de binários do sistema:
+
+		sudo mv speedtest-cli /usr/bin/speedtest-cli
+
+- Por padrão, o programa irá selecionar o “melhor” servidor de testes para sua localidade. Mas se você quiser determinar essa localidade manualmente, execute o comando abaixo para listar os servidores disponíveis:
+
+		speedtest-cli --list
+
+Será mostrada uma lista com um código e o nome da localidade.

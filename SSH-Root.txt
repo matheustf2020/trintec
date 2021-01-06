@@ -1,0 +1,20 @@
+- Tornando root SSH:
+	vi /etc/ssh/sshd_config
+Dentro do arquivo você vai encontrar o trecho do código abaixo, procure o item #Authentication como abaixo:
+
+# Authentication:
+LoginGraceTime 120
+PermitRootLogin prohibit-password
+StrictModes yes
+
+Observe que a um item PermitRootLogin prohibit-password agora comente a linha e insira um outro item o PermitRootLogin yes logo abaixo para que o acesso SSH seja habilitado no Ubuntu:
+
+# Authentication:
+LoginGraceTime 120
+#PermitRootLogin prohibit-password
+PermitRootLogin yes
+StrictModes yes
+
+Por último reinicie o serviço e pronto, o acesso esta liberado!
+	systemctl restart sshd
+

@@ -1,0 +1,22 @@
+1. Para instalar os Adicionais para Convidados no Debian, inicialmente atualize todos os pacotes da sua instalação, com os comandos:
+
+	sudo apt update
+	sudo apt -y upgrade
+
+2. Agora, será necessário instalar os seguintes pacotes:
+
+	sudo apt install -y build-essential module-assistant
+
+3. Após instalar o module-assistant, precisamos baixar os headers do kernel que serão necessários na instalação dos Adicionais para Convidados, com o comando:
+
+	sudo m-a prepare
+
+4. Vamos inserir o CD de Adicionais para Convidados, clicando no menu "Dispositivos" do VirtualBox e depois, em "Inserir imagem de CD dos Adicionais para Convidado...".
+O CD deve estar montado no diretório /media/cdrom/.
+Executar o comando abaixo para instalar os Adicionais para Convidados:
+
+	sudo sh /media/cdrom/VBoxLinuxAdditions.run
+
+5.Reiniciar o computador:
+
+	sudo shutdown -r now
